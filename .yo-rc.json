@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Chance Hudson",
+      "authorEmail": "chance@eventology.io",
+      "authorUrl": "https://eventology.io"
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "name": "generator-eventology",
+  "version": "0.0.1",
+  "description": "A generator for eventology projects",
+  "homepage": "https://github.com/eventology/generator-eventology",
+  "author": {
+    "name": "Chance Hudson",
+    "email": "chance@eventology.io",
+    "url": "https://eventology.io"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "yo",
+    "yeoman",
+    "eventology",
+    "web",
+    "app",
+    "yeoman-generator"
+  ],
+  "devDependencies": {
+    "yeoman-test": "^1.7.0",
+    "yeoman-assert": "^3.1.0",
+    "eslint": "^5.4.0",
+    "prettier": "^1.11.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-config-xo": "^0.24.2",
+    "jest": "^23.5.0"
+  },
+  "engines": {
+    "npm": ">= 8.0.0"
+  },
+  "dependencies": {
+    "yeoman-generator": "^2.0.1",
+    "chalk": "^2.1.0",
+    "yosay": "^2.0.1",
+    "@eventology/base-web-app": "git@github.com:eventology/base-web-app.git"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "xo",
+      "prettier"
+    ],
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true,
+          "printWidth": 90
+        }
+      ]
+    },
+    "plugins": [
+      "prettier"
+    ]
+  },
+  "scripts": {
+    "pretest": "eslint .",
+    "precommit": "lint-staged",
+    "test": "jest"
+  },
+  "repository": "eventology/generator-eventology",
+  "license": "MIT"
+}
