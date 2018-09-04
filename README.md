@@ -1,4 +1,5 @@
-# generator-eventology [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# generator-eventology [![npm](https://img.shields.io/npm/v/generator-eventology.svg)](https://www.npmjs.com/package/generator-eventology)
+
 > A generator for Eventology projects
 
 ## Installation
